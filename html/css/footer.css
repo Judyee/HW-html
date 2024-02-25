@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+footer{
+    background-color: rgb(201, 198, 198);
+}
 .footer{
     margin: auto;
     max-width: 1280px;

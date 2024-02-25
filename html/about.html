@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,51 +11,244 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@%5E2.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            border-top: 10px solid rgb(2, 107, 2);
+            background-color: rgb(224, 224, 224);
+        }
+
+        .logo-top {
+            width: 80px;
+            margin: 10px 20px 10px 10px
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        h3{
+            font-size: 20px;
+        }
+
+        .container {
+            /* background-color: pink;     背景顏色 */
+            width: 80%;
+            /* 寬度 */
+            max-width: 1170px;
+            /* 最大寬度 */
+            margin: auto;
+            /* 外邊界:自動 */
+        }
+
+        /* ::before */
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            display: inline-block;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            /*清除ul默認樣式*/
+            margin: 5px;
+            padding: 0;
+        }
+
+        .product {
+            width: 33.3333%;
+            /* background-color: rgb(255, 224, 162); */
+            /* border: 1px solid black; */
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .w-100 {
+            width: 100%;
+            padding: 5px 10px 0px 10px;
+        }
+
+        .logo-bottom {
+            width: 100px;
+            margin: 10px 20px 10px 10px;
+            float: left;
+        }
+
+        .contact-region {
+            display: flex;
+            flex-wrap: wrap;
+            /*自動分行*/
+            /* float: right; */
+            /* width: calc(100%/5); */
+        }
+
+        .bg-gray {
+            background: lightgray;
+            padding: 0;
+        }
+
+        /* 後代選取器 空白鍵 */
+        /* 子帶選取器 > */
+        .breadcrumb ol {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .breadcrumb ol li {
+            float: left;
+        }
+
+        /* 後代 相鄰 偽類 */
+        .breadcrumb ol li+li::before {
+            content: "\00a0/\00a0";
+        }
+
+        .breadcrumb a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: black;
+        }
+
+        nav {
+            width: 70%;
+        }
+
+        nav>ul {
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+
+        nav>ul>li {
+            float: left;
+            /* width: 25%; */
+        }
+
+        nav>ul>li>a {
+            display: block;
+            line-height: 40px;
+            text-align: center;
+            color: rgb(21, 21, 21);
+            font-size: 18px;
+        }
+
+    </style>
 </head>
+
 <body>
+    <header>
+        <div class="flex">
+            <img src="images/starbucks-2.png" alt="starbucks-logo" class="logo-top">
+            <!-- .container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{items$} -->
+            <div class="container">
+                <nav class="float-left">
+                    <ul>
+                        <li><a href="about.html">認識我們</a></li>
+                        <li><a href="coffee.html">商品列表</a></li>
+                        <li><a href="store.html">門市資訊</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="bg-gray breadcrumb">
+        <ol>
+            <li><a href="index.html">首頁</a></li>
+            <li>認識我們</li>
+        </ol>
+    </div>
+    <br>
     <!-- heading -->
-    <img src="images/about-1.jpg" alt="關於星巴克" width="400" title="關於星巴克">
-    <h2>認識我們</h2>
-    <h3>關於星巴克</h3>
-    <p>
-        從原產地的一株咖啡樹，最終成為您手中的一杯咖啡；我們堅持採購並且烘焙最高品質的咖啡，這是我們一直努力的基本原則；最初的十英呎到最後十英呎的珍貴體驗，為咖啡的故事做了最佳的註解，同時也塑造出咖啡家族的獨特風味及口感特性，閱讀咖啡的故事，可以讓您更瞭解咖啡，豐富您的咖啡體驗。
-    </p>
-    <p>
-        1971 年星巴克創立於美國西雅圖派克市場，1987 年霍華．舒茲(星巴克主席、總裁暨行政總裁)在當地投資者的協助下買下星巴克，同年在加拿大溫哥華開拓門市，為首次進軍國際市場。今日星巴克門市遍佈全球，已是全世界最主要的咖啡烘焙與零售業者，霍華‧蕭茲先生經營咖啡事業著重在人文特質與品質堅持，強調尊重顧客與員工，並堅持採購全球最好的咖啡豆烘焙製作，提供消費者最佳的咖啡產品與最舒適的消費場所，經營 Starbucks Coffee 成為當今全球精品咖啡領導品牌，備受國際學者專家推崇，譽為「咖啡王國傳奇」。
-    </p>
-    <p>
-        星巴克的企業使命：啟發並滋潤人們的心靈，在每個人、每一杯、每個社區中皆能體現。秉持續追求卓越以及實踐企業使命與價值觀，我們透過每一杯咖啡的傳遞，將獨特的星巴克體驗帶入每位顧客的生活中。
-    </p>
-    <p>
-        更多相關資訊請至 美國星巴克企業網站 www.starbucks.com
-    </p>
-    <h3>星巴克共愛地球計畫</h3>
-    <p>
-        Starbucks™ Shared Planet.™ 星巴克共愛地球™ 計劃是我們對品牌的承諾，從採購咖啡豆的源頭開始，重視與關注減少環境污染的議題，同時參與產地社區的建設與服務。
-    </p>
-    <figure>
-        <img src="images/about-2.jpg" alt="星巴克共愛地球計畫">
-        <!-- 行內樣式 -->
-        <!-- <figcaption style="color: brown; font-size: 16px;">星巴克共愛地球計畫</figcaption> -->
-        <figcaption>星巴克共愛地球計畫</figcaption>
-    </figure>
-    <h3>道德採購</h3>
-    <p>
-        對星巴克而言，道德採購不僅僅是跟供應商購買咖啡。我們一直努力幫助支持優質、透明且公平的交易。我們堅持從源頭保證品質，並重新投資到種植咖啡的人們和社區中。
-    </p>
-    <img src="images/about-3.jpg" alt="道德採購">
-    <h3>原住星希望</h3>
-    <p>
-        謝謝您的支持，讓原鄉孩子安心念書，這不只是求學之路，更是夢想的回鄉之路！
-    </p>
-    <img src="images/about-4.jpg" alt="原住星希望">
+    <div class="container">
+        <div>
+            <ul>
+                <li>關於星巴克</li>
+                <li>企業責任</li>
+                <li>企業公告</li>
+                <li>星聞室</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/about-1.jpg" alt="關於星巴克" title="關於星巴克">
+            <h2>認識我們</h2>
+            <h3>關於星巴克</h3>
+            <p>
+                從原產地的一株咖啡樹，最終成為您手中的一杯咖啡；我們堅持採購並且烘焙最高品質的咖啡，這是我們一直努力的基本原則；最初的十英呎到最後十英呎的珍貴體驗，為咖啡的故事做了最佳的註解，同時也塑造出咖啡家族的獨特風味及口感特性，閱讀咖啡的故事，可以讓您更瞭解咖啡，豐富您的咖啡體驗。
+            </p>
+            <p>
+                1971 年星巴克創立於美國西雅圖派克市場，1987
+                年霍華．舒茲(星巴克主席、總裁暨行政總裁)在當地投資者的協助下買下星巴克，同年在加拿大溫哥華開拓門市，為首次進軍國際市場。今日星巴克門市遍佈全球，已是全世界最主要的咖啡烘焙與零售業者，霍華‧蕭茲先生經營咖啡事業著重在人文特質與品質堅持，強調尊重顧客與員工，並堅持採購全球最好的咖啡豆烘焙製作，提供消費者最佳的咖啡產品與最舒適的消費場所，經營
+                Starbucks Coffee 成為當今全球精品咖啡領導品牌，備受國際學者專家推崇，譽為「咖啡王國傳奇」。
+            </p>
+            <p>
+                星巴克的企業使命：啟發並滋潤人們的心靈，在每個人、每一杯、每個社區中皆能體現。秉持續追求卓越以及實踐企業使命與價值觀，我們透過每一杯咖啡的傳遞，將獨特的星巴克體驗帶入每位顧客的生活中。
+            </p>
+            <p>
+                更多相關資訊請至 美國星巴克企業網站 www.starbucks.com
+            </p>
+            <br>
+            <h3>星巴克共愛地球計畫</h3>
+            <p>
+                Starbucks™ Shared Planet.™ 星巴克共愛地球™ 計劃是我們對品牌的承諾，從採購咖啡豆的源頭開始，重視與關注減少環境污染的議題，同時參與產地社區的建設與服務。
+            </p>
+            <figure>
+                <img src="images/about-2.jpg" alt="星巴克共愛地球計畫" width="800">
+                <!-- 行內樣式 -->
+                <!-- <figcaption style="color: brown; font-size: 16px;">星巴克共愛地球計畫</figcaption> -->
+                <figcaption>星巴克共愛地球計畫</figcaption>
+            </figure>
+            <br>
+            <h3>道德採購</h3>
+            <p>
+                對星巴克而言，道德採購不僅僅是跟供應商購買咖啡。我們一直努力幫助支持優質、透明且公平的交易。我們堅持從源頭保證品質，並重新投資到種植咖啡的人們和社區中。
+            </p>
+            <img src="images/about-3.jpg" alt="道德採購" width="800">
+            <br>
+            <h3>原住星希望</h3>
+            <p>
+                謝謝您的支持，讓原鄉孩子安心念書，這不只是求學之路，更是夢想的回鄉之路！
+            </p>
+            <img src="images/about-4.jpg" alt="原住星希望" width="800">
+        </div>
+    </div>
+    
     <footer>
         <div class="footer">
-            <div class="container social-icon">
-                <a class="icon-facebook" href="https://www.facebook.com/starbuckstaiwan?ref=nf"><i class="fa-brands fa-square-facebook"></i></a>
-                <a class="icon-instergram" href="https://www.instagram.com/starbuckstw/"><i class="fa-brands fa-square-instagram"></i></a>
-                <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW?feature=mhum"><i class="fa-brands fa-square-youtube"></i></a>
+            <div class="social-icon">
+                <a class="icon-facebook" href="https://www.facebook.com/starbuckstaiwan?ref=nf"><i
+                        class="fa-brands fa-square-facebook"></i></a>
+                <a class="icon-instergram" href="https://www.instagram.com/starbuckstw/"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+                <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW?feature=mhum"><i
+                        class="fa-brands fa-square-youtube"></i></a>
                 <a class="icon-line" href="http://line.me/R/ti/p/@471vnurh"><i class="fa-brands fa-line"></i></a>
             </div>
             <div class="footer-main">
@@ -100,8 +294,9 @@
             <div class="contact-region">
                 <p>copyright &copy; 版權所有. All rights reserved.</p>
             </div>
-            </div>
         </div>
-     </footer>
+        </div>
+    </footer>
 </body>
+
 </html>

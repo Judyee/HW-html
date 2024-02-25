@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@%5E2.0/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
-        body{
+
+        body {
             margin: 0;
             /*
                 1.已先掛載套用，英文字沒有中文，中文會顯示後面的字型
@@ -21,83 +26,104 @@
              */
             font-family: "Noto Sans TC", serif;
         }
-        header{
+
+        header {
             border-top: 10px solid rgb(2, 107, 2);
             background-color: rgb(224, 224, 224);
             margin-bottom: 50px;
         }
-        .logo-top{
+
+        .logo-top {
             width: 80px;
             margin: 10px 20px 10px 10px
         }
-        .container{
+
+        .container {
             /* background-color: pink;     背景顏色 */
-            width: 80%;                   /* 寬度 */
-            max-width: 1170px;            /* 最大寬度 */
-            margin: auto;                 /* 外邊界:自動 */
+            width: 80%;
+            /* 寬度 */
+            max-width: 1170px;
+            /* 最大寬度 */
+            margin: auto;
+            /* 外邊界:自動 */
         }
+
         /* ::before */
-        .container::after{
+        .container::after {
             content: "";
             display: table;
             clear: both;
         }
-        form::after{
+
+        form::after {
             content: "";
             display: table;
             clear: both;
         }
-        footer{
-            margin-top: 50px;
-            background-color: chocolate;
-        }
-        a{
+
+        a {
             text-decoration: none;
         }
-        ul{
+
+        ul {
             display: inline-block;
         }
-        ul, li{
-            list-style: none; /*清除ul默認樣式*/
+
+        ul,
+        li {
+            list-style: none;
+            /*清除ul默認樣式*/
             margin: 0;
             padding: 5px;
         }
-        .product{
+
+        .product {
             width: 33.3333%;
             /* background-color: rgb(255, 224, 162); */
             /* border: 1px solid black; */
         }
-        .float-left{
+
+        .float-left {
             float: left;
         }
-        .w-100{
+
+        .w-100 {
             width: 100%;
             padding: 5px 10px 0px 10px;
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
-        .logo-bottom{
+
+        .logo-bottom {
             width: 100px;
             margin: 10px 20px 10px 10px;
             float: left;
         }
-        .contact-region{
+
+        .contact-region {
             display: flex;
         }
-        .label-name{
+
+        .label-name {
             display: bolck;
             margin-bottom: 5px;
         }
-        input[type="text"], input[type="email"], textarea, select{
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
             width: 100%;
             padding: 5px;
             border: 1px solid lightgray;
             border-radius: 4px;
             margin-bottom: 20px;
         }
-        input[type="submit"]{
-            border:none;
+
+        input[type="submit"] {
+            border: none;
             background-color: orange;
             padding: 5px;
             width: 200px;
@@ -108,12 +134,16 @@
             float: right;
             font-size: 18px;
         }
-        input[type="submit"]:hover{
+
+        input[type="submit"]:hover {
             background-color: rgb(245, 106, 0);
         }
-        .pagetop{
-            position: fixed; /* 固定定位 */
-            display: block;  /* 塊級元素 */
+
+        .pagetop {
+            position: fixed;
+            /* 固定定位 */
+            display: block;
+            /* 塊級元素 */
             right: 20px;
             bottom: 20px;
             /* top right bottom left */
@@ -121,87 +151,106 @@
             height: 50px;
             background-color: black;
             text-align: center;
-            line-height: 50px;  /* 行高150% 180% */
+            line-height: 50px;
+            /* 行高150% 180% */
             text-decoration: none;
             color: white;
             border-radius: 50%;
         }
+
         /* 
         display:inline 行內
         display:block 塊級
         display:flex
         display:grid
         */
-        .bg-gray{
+        .bg-gray {
             background: lightgray;
             padding: 0;
         }
+
         /* 後代選取器 空白鍵 */
         /* 子帶選取器 > */
-        .breadcrumb ol{
+        .breadcrumb ol {
             margin: 0;
             padding: 0;
             list-style-type: none;
         }
-        .breadcrumb ol li{
+
+        .breadcrumb ol li {
             float: left;
         }
+
         /* 後代 相鄰 偽類 */
-        .breadcrumb ol li+li::before{
+        .breadcrumb ol li+li::before {
             content: "\00a0/\00a0";
         }
-        .breadcrumb a{
+
+        .breadcrumb a {
             color: gray;
             text-decoration: none;
         }
-        .breadcrumb a:hover{
+
+        .breadcrumb a:hover {
             color: black;
         }
-        h1{
+
+        h1 {
             width: 30%;
         }
-        nav{
+
+        nav {
             width: 70%;
         }
-        nav>ul{
+
+        nav>ul {
             padding: 0px;
             margin: 0px;
             list-style-type: none;
         }
-        nav>ul>li{
+
+        nav>ul>li {
             float: left;
             width: 25%;
         }
-        nav>ul>li>a{
+
+        nav>ul>li>a {
             display: block;
-            background-color: orange;
+            /* background-color: orange; */
             line-height: 40px;
             text-align: center;
             color: rgb(21, 21, 21);
             font-size: 18px;
         }
-        .social-cion{
+
+        .social-cion {
             text-align: center;
             margin-bottom: 20px;
         }
-        .social-cion a{
+
+        .social-cion a {
             /* color: gray; */
             font-size: 32px;
             margin-right: 10px;
         }
-        .icon-facebook{
+
+        .icon-facebook {
             color: #4267B2;
         }
-        .icon-instergram{
+
+        .icon-instergram {
             color: #E1306C;
         }
-        .icon-youtube{
+
+        .icon-youtube {
             color: #FF0000;
         }
-        .icon-line{
+
+        .icon-line {
             color: #06c755;
         }
-        .bg-img{
+
+        .bg-img {
             height: 500px;
             background-image: url(images/bgcut.jpg);
             background-attachment: fixed;
@@ -211,32 +260,36 @@
             letter-spacing: 5px;
             text-align: center;
         }
-        .parent{
+
+        .parent {
             position: relative;
             z-index: 1;
         }
-        .child{
+
+        .child {
             position: absolute;
             z-index: 0;
         }
     </style>
 </head>
+
 <body>
     <!-- header{頁首}+.container{內容}+footer{頁尾} -->
     <!-- 頁首 start -->
     <header>
-        <img src="images/starbucks-2.png" alt="starbucks-logo" class="logo-top">
-        <!-- .container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{items$} -->
-        <div class="container">
-            <h1 class="float-left"><a href="">網站名稱</a></h1>
-            <nav class="float-left">
-                <ul>
-                    <li><a href="about.html">關於我們</a></li>
-                    <li><a href="coffee.html">商品列表</a></li>
-                    <li><a href="store.html">門市資訊</a></li>
-                    <li><a href="contact.html">聯絡我們</a></li>
-                </ul>
-            </nav>
+        <div class="flex">
+            <img src="images/starbucks-2.png" alt="starbucks-logo" class="logo-top">
+            <!-- .container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{items$} -->
+            <div class="container">
+                <nav class="float-left">
+                    <ul>
+                        <li><a href="about.html">認識我們</a></li>
+                        <li><a href="coffee.html">商品列表</a></li>
+                        <li><a href="store.html">門市資訊</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- 頁首 end -->
@@ -254,19 +307,16 @@
     <!-- .container end -->
     <!-- break 斷行/換行 -->
     <br><br><br><br><br><br><br><br><br>
-    <a href="#" class="pagetop">TOP</a>
-    <div class="container social-cion">
-        <a class="icon-facebook" href="https://www.facebook.com/starbuckstaiwan?ref=nf"><i class="fa-brands fa-square-facebook"></i></a>
-        <a class="icon-instergram" href="https://www.instagram.com/starbuckstw/"><i class="fa-brands fa-square-instagram"></i></a>
-        <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW?feature=mhum"><i class="fa-brands fa-square-youtube"></i></a>
-        <a class="icon-line" href="http://line.me/R/ti/p/@471vnurh"><i class="fa-brands fa-line"></i></a>
-    </div>
+
     <footer>
         <div class="footer">
-            <div class="container social-icon">
-                <a class="icon-facebook" href="https://www.facebook.com/starbuckstaiwan?ref=nf"><i class="fa-brands fa-square-facebook"></i></a>
-                <a class="icon-instergram" href="https://www.instagram.com/starbuckstw/"><i class="fa-brands fa-square-instagram"></i></a>
-                <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW?feature=mhum"><i class="fa-brands fa-square-youtube"></i></a>
+            <div class="social-icon">
+                <a class="icon-facebook" href="https://www.facebook.com/starbuckstaiwan?ref=nf"><i
+                        class="fa-brands fa-square-facebook"></i></a>
+                <a class="icon-instergram" href="https://www.instagram.com/starbuckstw/"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+                <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW?feature=mhum"><i
+                        class="fa-brands fa-square-youtube"></i></a>
                 <a class="icon-line" href="http://line.me/R/ti/p/@471vnurh"><i class="fa-brands fa-line"></i></a>
             </div>
             <div class="footer-main">
@@ -312,8 +362,9 @@
             <div class="contact-region">
                 <p>copyright &copy; 版權所有. All rights reserved.</p>
             </div>
-            </div>
         </div>
-     </footer>
+        </div>
+    </footer>
 </body>
+
 </html>
