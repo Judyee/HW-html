@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星巴克| Starbucks</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,20 +15,17 @@
         }
         body{
             margin: 0;
-            /*
-                1.已先掛載套用，英文字沒有中文，中文會顯示後面的字型
-                2.如果離線狀態導致字型沒有顯示，也是以後面掛載為主 
-             */
-            font-family: "Noto Sans TC", serif;
         }
         header{
             border-top: 10px solid rgb(2, 107, 2);
             background-color: rgb(224, 224, 224);
-            margin-bottom: 50px;
         }
         .logo-top{
             width: 80px;
             margin: 10px 20px 10px 10px
+        }
+        h1{
+            margin: 0;
         }
         .container{
             /* background-color: pink;     背景顏色 */
@@ -42,13 +39,7 @@
             display: table;
             clear: both;
         }
-        form::after{
-            content: "";
-            display: table;
-            clear: both;
-        }
         footer{
-            margin-top: 50px;
             background-color: chocolate;
         }
         a{
@@ -59,8 +50,8 @@
         }
         ul, li{
             list-style: none; /*清除ul默認樣式*/
-            margin: 0;
-            padding: 5px;
+            margin: 5px;
+            padding: 0;
         }
         .product{
             width: 33.3333%;
@@ -74,9 +65,6 @@
             width: 100%;
             padding: 5px 10px 0px 10px;
         }
-        h2{
-            text-align: center;
-        }
         .logo-bottom{
             width: 100px;
             margin: 10px 20px 10px 10px;
@@ -84,140 +72,9 @@
         }
         .contact-region{
             display: flex;
-        }
-        .label-name{
-            display: bolck;
-            margin-bottom: 5px;
-        }
-        input[type="text"], input[type="email"], textarea, select{
-            width: 100%;
-            padding: 5px;
-            border: 1px solid lightgray;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-        input[type="submit"]{
-            border:none;
-            background-color: orange;
-            padding: 5px;
-            width: 200px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            color: white;
-            cursor: pointer;
-            float: right;
-            font-size: 18px;
-        }
-        input[type="submit"]:hover{
-            background-color: rgb(245, 106, 0);
-        }
-        .pagetop{
-            position: fixed; /* 固定定位 */
-            display: block;  /* 塊級元素 */
-            right: 20px;
-            bottom: 20px;
-            /* top right bottom left */
-            width: 50px;
-            height: 50px;
-            background-color: black;
-            text-align: center;
-            line-height: 50px;  /* 行高150% 180% */
-            text-decoration: none;
-            color: white;
-            border-radius: 50%;
-        }
-        /* 
-        display:inline 行內
-        display:block 塊級
-        display:flex
-        display:grid
-        */
-        .bg-gray{
-            background: lightgray;
-            padding: 0;
-        }
-        /* 後代選取器 空白鍵 */
-        /* 子帶選取器 > */
-        .breadcrumb ol{
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-        .breadcrumb ol li{
-            float: left;
-        }
-        /* 後代 相鄰 偽類 */
-        .breadcrumb ol li+li::before{
-            content: "\00a0/\00a0";
-        }
-        .breadcrumb a{
-            color: gray;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover{
-            color: black;
-        }
-        h1{
-            width: 30%;
-        }
-        nav{
-            width: 70%;
-        }
-        nav>ul{
-            padding: 0px;
-            margin: 0px;
-            list-style-type: none;
-        }
-        nav>ul>li{
-            float: left;
-            width: 25%;
-        }
-        nav>ul>li>a{
-            display: block;
-            background-color: orange;
-            line-height: 40px;
-            text-align: center;
-            color: rgb(21, 21, 21);
-            font-size: 18px;
-        }
-        .social-cion{
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .social-cion a{
-            /* color: gray; */
-            font-size: 32px;
-            margin-right: 10px;
-        }
-        .icon-facebook{
-            color: #4267B2;
-        }
-        .icon-instergram{
-            color: #E1306C;
-        }
-        .icon-youtube{
-            color: #FF0000;
-        }
-        .icon-line{
-            color: #06c755;
-        }
-        .bg-img{
-            height: 500px;
-            background-image: url(images/bgcut.jpg);
-            background-attachment: fixed;
-            line-height: 500px;
-            color: black;
-            font-size: 30px;
-            letter-spacing: 5px;
-            text-align: center;
-        }
-        .parent{
-            position: relative;
-            z-index: 1;
-        }
-        .child{
-            position: absolute;
-            z-index: 0;
+            flex-wrap: wrap; /*自動分行*/
+            /* float: right; */
+            /* width: calc(100%/5); */
         }
     </style>
 </head>
@@ -228,7 +85,6 @@
         <img src="images/starbucks-2.png" alt="starbucks-logo" class="logo-top">
         <!-- .container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{items$} -->
         <div class="container">
-            <h1 class="float-left"><a href="">網站名稱</a></h1>
             <nav class="float-left">
                 <ul>
                     <li><a href="about.html">關於我們</a></li>
@@ -240,26 +96,107 @@
         </div>
     </header>
     <!-- 頁首 end -->
-    <!-- .container start -->
-    <img src="images/bgcut.jpg" alt="" width="100%">
+    <!-- 麵包屑 breadcrumb start ordered list 有序列表-->
+    <div class="bg-gray breadcrumb">
+        <ol>
+            <li><a href="index.html">首頁</a></li>
+            <li>聯絡我們</li>
+        </ol>
+    </div>
+    <!-- 麵包屑 breadcrumb end -->
     <div class="container">
-        預留新聞區塊/3欄
-    </div>
-    <div class="bg-img">
-        咖啡
-    </div>
-    <div class="container">
-        預留商品區塊/4欄
-    </div>
-    <!-- .container end -->
-    <!-- break 斷行/換行 -->
-    <br><br><br><br><br><br><br><br><br>
-    <a href="#" class="pagetop">TOP</a>
-    <div class="container social-cion">
-        <a class="icon-facebook" href="https://www.facebook.com/starbuckstaiwan?ref=nf"><i class="fa-brands fa-square-facebook"></i></a>
-        <a class="icon-instergram" href="https://www.instagram.com/starbuckstw/"><i class="fa-brands fa-square-instagram"></i></a>
-        <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW?feature=mhum"><i class="fa-brands fa-square-youtube"></i></a>
-        <a class="icon-line" href="http://line.me/R/ti/p/@471vnurh"><i class="fa-brands fa-line"></i></a>
+        <h1>門市資訊</h1>
+        <!-- .float-left.product*15>.product-content>img.w-100+p{商品$} -->
+        <div class="float-left product">
+            <img src="images/store1.jpg" alt="咖啡" class="w-100">
+            <p>沙鹿北勢門市</p>
+            <a href="https://maps.app.goo.gl/w5bgYqD4b8SQQoBBA">台中市沙鹿區台灣大道七段 373 號</a>
+            <p>(04)-26527825</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store2.jpg" alt="咖啡" class="w-100">
+            <p>花蓮理想門市</p>
+            <a href="https://maps.app.goo.gl/6gSHDAZE6Xa8Eg4B9">花蓮縣壽豐鄉豐坪路三段 289 號</a>
+            <p>(03)-8650895</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store3.jpg" alt="咖啡" class="w-100">
+            <p>台南麻豆門市</p>
+            <a href="https://maps.app.goo.gl/pFugrP7dAbSTaj997">台南市麻豆區中正路 210 號</a>
+            <p>(06)-5711663</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store4.jpg" alt="咖啡" class="w-100">
+            <p>松竹洲際門市</p>
+            <a href="https://goo.gl/maps/Kour4dvNYKCDBPwE6">台中市北屯區松竹路三段 1133 號</a>
+            <p>(04)-24261750</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store5.jpg" alt="咖啡" class="w-100">
+            <p>新竹關埔門市</p>
+            <a href="https://goo.gl/maps/ba1t6o1E2XhJ8KjY9">新竹市東區埔頂二路 71 號</a>
+            <p>(03)-5797452</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store6.jpg" alt="咖啡" class="w-100">
+            <p>高雄夢時代門市</p>
+            <a href="https://goo.gl/maps/idWV7oWiCYpNEwsFA">高雄市前鎮區中華五路 789 號 1F</a>
+            <p>(07)-823-2611</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store7.jpg" alt="咖啡" class="w-100">
+            <p>時代寓所門市</p>
+            <a href="https://goo.gl/maps/qYUEEUx2iYZ72Lvx6">台北市中正區林森南路 7-1 號</a>
+            <p>(02)-23214348</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store8.jpg" alt="咖啡" class="w-100">
+            <p>奇美博物館門市</p>
+            <a href="https://goo.gl/maps/ozwiUpGSSfKU1kZV7">台南市仁德區文華路二段 66 號</a>
+            <p>(06)-2663946</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store9.jpg" alt="咖啡" class="w-100">
+            <p>台北時代門市</p>
+            <a href="https://goo.gl/maps/QtfqS4CFG5BVK3178">台北市信義區忠孝東路五段 8 號 2 樓</a>
+            <p>(02)-2722-6292</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store10.jpg" alt="咖啡" class="w-100">
+            <p>北港門市</p>
+            <a href="https://g.page/Beigang-SB?share">雲林縣北港鎮華南路 38 號</a>
+            <p>(05)-7832647</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store11.jpg" alt="咖啡" class="w-100">
+            <p>中埔穀倉門市</p>
+            <a href="https://goo.gl/maps/jCdVy94xCdfYA18L8">嘉義縣中埔鄉金蘭村頂山門 36 號</a>
+            <p>(05)-2300731</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store12.jpg" alt="咖啡" class="w-100">
+            <p>宜蘭頭城門市</p>
+            <a href="https://goo.gl/maps/8ZzfbjG8SpZFKGhx6">宜蘭縣頭城鎮青雲路 3 段 396 號</a>
+            <p>(039)-776579</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store13.jpg" alt="咖啡" class="w-100">
+            <p>台南佳里門市</p>
+            <a href="https://goo.gl/maps/RggiCtV9x3oB1jTYA">台南市佳里區新生東路 1 號</a>
+            <p>(06)-7232740</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store14.jpg" alt="咖啡" class="w-100">
+            <p>洄瀾門市</p>
+            <a href="https://goo.gl/maps/xcJpDvU35iL2">花蓮縣吉安鄉南濱路一段 505 號</a>
+            <p>(03)-8420014</p>
+        </div>
+        <div class="float-left product">
+            <img src="images/store15.jpg" alt="咖啡" class="w-100">
+            <p>草山門市</p>
+            <a href="https://goo.gl/maps/s9SBxQ9DY4U2">台北市士林區國泰街 5 號</a>
+            <p>(02)-28627317</p>
+        </div>
     </div>
     <footer>
         <div class="footer">

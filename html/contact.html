@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星巴克| Starbucks</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,11 +180,11 @@
             color: rgb(21, 21, 21);
             font-size: 18px;
         }
-        .social-cion{
+        .social-icon{
             text-align: center;
             margin-bottom: 20px;
         }
-        .social-cion a{
+        .social-icon a{
             /* color: gray; */
             font-size: 32px;
             margin-right: 10px;
@@ -200,24 +200,6 @@
         }
         .icon-line{
             color: #06c755;
-        }
-        .bg-img{
-            height: 500px;
-            background-image: url(images/bgcut.jpg);
-            background-attachment: fixed;
-            line-height: 500px;
-            color: black;
-            font-size: 30px;
-            letter-spacing: 5px;
-            text-align: center;
-        }
-        .parent{
-            position: relative;
-            z-index: 1;
-        }
-        .child{
-            position: absolute;
-            z-index: 0;
         }
     </style>
 </head>
@@ -240,22 +222,82 @@
         </div>
     </header>
     <!-- 頁首 end -->
+    <!-- 麵包屑 breadcrumb start ordered list 有序列表-->
+    <div class="bg-gray breadcrumb">
+        <ol>
+            <li><a href="index.html">首頁</a></li>
+            <li>聯絡我們</li>
+        </ol>
+    </div>
+    <!-- 麵包屑 breadcrumb end -->
     <!-- .container start -->
-    <img src="images/bgcut.jpg" alt="" width="100%">
     <div class="container">
-        預留新聞區塊/3欄
-    </div>
-    <div class="bg-img">
-        咖啡
-    </div>
-    <div class="container">
-        預留商品區塊/4欄
+        <h2>聯絡我們</h2>
+        <!-- 
+            input 輸入框
+                -type        輸入框類型
+                -id          對應label名稱
+                -name        傳輸到資料庫的識別名稱
+
+            type
+                -text        文字
+                -password    密碼
+                -placeholder 預留文字
+                -value       傳送值
+         -->
+        <form action="">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" placeholder="請輸入姓名">
+            <br>
+            <label for="phone">電話</label>
+            <input type="text" id="phone" name="phone" placeholder="請輸入電話">
+            <br>
+            <label for="address">地址</label>
+            <input type="text" id="address" name="address" placeholder="請輸入地址">
+            <br>
+            <!--
+            <label for="password">密碼</label>
+            <input type="password" id="password" name="password">
+            -->
+            <label for="email">電子郵件</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <label for="target">聯絡目的</label>
+            <select name="target" id="target">
+                <option>會員帳密問題</option>
+                <option>退換貨</option>
+                <option>運費</option>
+            </select>
+            <br>
+            <label for="">稱謂</label>
+            <!-- 男 -->
+            <input type="radio" id="male" name="gender">
+            <label for="male">先生</label>
+            <!-- 女 -->
+            <input type="radio" id="female" name="gender">
+            <label for="female">女士</label>
+            <br>
+            <!-- 傳輸陣列要使用中括號結尾[] -->
+            <label for="interests">興趣</label>
+            <input type="checkbox" id="programming" name="interests[]" value="程式">
+            <label for="programming">程式</label>
+            <input type="checkbox" id="gaming" name="interests[]" value="遊戲">
+            <label for="gaming">遊戲</label>
+            <input type="checkbox" id="reading" name="interests[]" value="閱讀">
+            <label for="reading">閱讀</label>
+            <br>
+            <label for="message">內容</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="送出表單">
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115680.15187544012!2d121.39921734335935!3d25.033913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd379a5ec97%3A0xedc006d25a9e35df!2z6LOH5bGV5ZyL6Zqb6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1708495262032!5m2!1szh-TW!2stw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <!-- .container end -->
     <!-- break 斷行/換行 -->
     <br><br><br><br><br><br><br><br><br>
     <a href="#" class="pagetop">TOP</a>
-    <div class="container social-cion">
+    <div class="container social-icon">
         <a class="icon-facebook" href="https://www.facebook.com/starbuckstaiwan?ref=nf"><i class="fa-brands fa-square-facebook"></i></a>
         <a class="icon-instergram" href="https://www.instagram.com/starbuckstw/"><i class="fa-brands fa-square-instagram"></i></a>
         <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW?feature=mhum"><i class="fa-brands fa-square-youtube"></i></a>

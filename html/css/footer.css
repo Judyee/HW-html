@@ -2,35 +2,56 @@
     box-sizing: border-box;
 }
 .footer{
-    max-width: 100%;
-    margin: 0;
-    padding: 5px;
+    margin: auto;
+    max-width: 1280px;
+    text-align: center;
+    background-color: rgb(201, 198, 198);
+}
+.footer-main{
     display: block;
-    /* background-color: black; */
+    position: relative;
+    box-sizing: border-box;
 }
 .contact-region{
-    content: "";
     display: flex;
     width: 100%;
     margin: 0;
+    list-style: none;
     text-align: left;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
-.parent{
-    position: relative;
-    z-index: 1;
-    background-color: white;
-    padding: 20px;
+.footer_info{
+    width: calc(100%/5);
+    text-align: left;
+    list-style: none;
 }
-.child{
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    z-index: 0;
-    background-color: white;
-    padding: 10px;
+h6{
+    font-size: 20px;
+    padding-left: 10px;
+    margin: auto;
+}
+ul, li{
+    list-style: none;
+    text-decoration: none;
+}
+.pagetop{
+    position: fixed; /* 固定定位 */
+    display: block;  /* 塊級元素 */
+    right: 20px;
+    bottom: 20px;
+    /* top right bottom left */
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    line-height: 50px;  /* 行高150% 180% */
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
 }
 .social-icon{
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
 }
 .social-icon a{
@@ -49,9 +70,4 @@
 }
 .icon-line{
     color: #06c755;
-}
-.footer-logo{
-    width: 100px;
-    margin: 10px 20px 10px 10px;
-    float: left;
 }
