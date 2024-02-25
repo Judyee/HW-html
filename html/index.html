@@ -255,20 +255,41 @@
             background-image: url(images/bgcut.jpg);
             background-attachment: fixed;
             line-height: 500px;
-            color: black;
+            color: white;
             font-size: 30px;
             letter-spacing: 5px;
             text-align: center;
         }
 
-        .parent {
-            position: relative;
-            z-index: 1;
+        .list {
+            width: 100%;
         }
 
-        .child {
-            position: absolute;
-            z-index: 0;
+        /* , 群組選取器 */
+        .list,
+        th,
+        td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: lightgray;
+        }
+
+        /* odd奇數 / even偶數 */
+        tr:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+
+        /* 當滑鼠滑入tr列時更換樣式 */
+        th,
+        td {
+            padding: 10px;
+        }
+
+        tr:hover {
+            background-color: rgb(156, 156, 156);
         }
     </style>
 </head>
@@ -296,10 +317,44 @@
     <!-- .container start -->
     <img src="images/bgcut.jpg" alt="" width="100%">
     <div class="container">
-        預留新聞區塊/3欄
+        <h2>門市一覽</h2>
+        <!-- 表格 start -->
+        <!-- table>tr>th*3^tr*2+td*3 -->
+        <table class="list">
+            <tr>
+                <th>門市名稱</th>
+                <th>地址</th>
+                <th>電話</th>
+            </tr>
+            <tr>
+                <td>沙鹿北勢門市</td>
+                <td>台中市沙鹿區台灣大道七段 373 號</td>
+                <td>(04)-26527825</td>
+            </tr>
+            <tr>
+                <td>花蓮理想門市</td>
+                <td>花蓮縣壽豐鄉豐坪路三段 289 號</td>
+                <td>(03)-8650895</td>
+            </tr>
+            <tr>
+                <td>台南麻豆門市</td>
+                <td>台南市麻豆區中正路 210 號</td>
+                <td>(06)-5711663</td>
+            </tr>
+            <tr>
+                <td>松竹洲際門市</td>
+                <td>台中市北屯區松竹路三段 1133 號</td>
+                <td>(04)-24261750</td>
+            </tr>
+            <tr>
+                <td>新竹關埔門市</td>
+                <td>新竹市東區埔頂二路 71 號</td>
+                <td>(03)-5797452</td>
+            </tr>
+        </table>
     </div>
     <div class="bg-img">
-        咖啡
+        再忙，也要跟你喝杯咖啡
     </div>
     <div class="container">
         預留商品區塊/4欄
